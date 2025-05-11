@@ -1,0 +1,148 @@
+/* src/components/Hero.css */
+
+.hero {
+  background-color: #393E46;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.hero-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: fadeInHero 1.5s ease forwards;
+}
+
+.hero-text {
+  flex: 1;
+  color: #ffffff; /* text color changed to white */
+  animation: slideInLeft 1.5s ease forwards;
+}
+
+.hero-text h1 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text h1 span {
+  color: #A89F91; /* highlight color remains muted greyish taupe */
+}
+
+.hero-text h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.hero-btn {
+  background-color: #A89F91;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+.hero-btn:hover {
+  background-color: #948979; /* slightly darker shade for hover */
+  color: black;
+}
+
+.hero-image {
+  flex: 1;
+  text-align: center;
+  animation: floatImage 4s ease-in-out infinite; /* smooth slow floating */
+}
+
+.hero-image img {
+  max-width: 320px;
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+
+/* Animations */
+@keyframes fadeInHero {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-container {
+    margin-top: 100px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    margin-top: 2rem;
+  }
+
+  .hero-image img {
+    max-width: 250px;
+  }
+}
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* move slightly up */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #393E46; /* Main background */
+    color: white;            /* Main text */
+    font-family: 'Poppins', sans-serif; /* or Space Grotesk */
+    line-height: 1.6;
+  }
+  
+  /* Anchor Links */
+  a {
+    color: #DFD0B8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #FF6347; /* Accent on hover */
+  }
+  
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    color:white;
+  }
+  
+  /* Section Padding */
+  section {
+    padding: 4rem 2rem;
+  }
+  
+  /* Scroll smooth */
+  html {
+    scroll-behavior: smooth;
+  }
+    

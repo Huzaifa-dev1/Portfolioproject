@@ -1,0 +1,99 @@
+/* About Section Background and Text */
+.about-section {
+  margin-top: 50px;
+  background-color: #393E46;
+  color: #DFD0B8;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Section */
+.about-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-header h2 {
+  font-size: 2.5rem;
+  color: #A89F91;
+  margin-bottom: 10px;
+}
+
+.about-header p {
+  font-size: 1.1rem;
+  color: #DFD0B8;
+}
+
+/* Cards Layout */
+.cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Card Base Style */
+.info-card {
+  background-color: #222831;
+  border-radius: 12px;
+  padding: 25px;
+  width: 70%;
+  max-width: 500px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(50px) scale(0.95);
+  animation: slideUpFade 0.8s ease-out forwards;
+  animation-delay: var(--delay, 0s); /* Controlled via inline style */
+  text-align: left;
+}
+
+/* Fade-in + Slide animation */
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Card Text Styling */
+.info-card h3 {
+  margin-bottom: 15px;
+  color: #DFD0B8;
+  font-size: 1.5rem;
+}
+
+.info-card p,
+.info-card ul {
+  color: #C8B6A6;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.info-card ul {
+  list-style: disc inside;
+  padding-left: 0;
+}
+
+.info-card li {
+  margin-bottom: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cards-wrapper {
+    align-items: center;
+  }
+
+  .info-card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .about-header h2 {
+    font-size: 2rem;
+  }
+}
